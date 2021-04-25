@@ -7,7 +7,7 @@ import java.util.Objects;
 public interface ISynthesizer {
 
 
-    List<String> SynthetizerProject(List<Student> students,List<Iteration> iterations);
+    List<String> SynthetizerProject(Project p);
 
 
 

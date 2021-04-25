@@ -4,30 +4,28 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExecutiveSynthesizer {
+public class ExecutiveSynthesizer implements ISynthesizer{
 
+    @Override
+    public List<String> SynthetizerProject(Project p) {
 
-    public List<String> SynthetizerProject(List<Iteration> iterations)  {
+        List<String> iterationsData = new ArrayList<>();
 
-        List<String> iterationdata = new ArrayList<>();
-
-        for(Iteration s: iterations)
+        for(Iteration s: p.getIterations())
         {
             String name = s.getGoal();
-            Duration duration;
-            try
-            {
-                duration=s.getDuration();
+            Duration WorkedHours;
+            try {
+                 WorkedHours = s.getDuration();
+
             }
             catch (SabanaResearchException e)
             {
-                duration = Duration.ofDays(0);
+                WorkedHours = Duration.ofDays(0);
             }
-
-
-            iterationdata.add(name+duration);
+            iterationsData.add(name+", "+WorkedHours.toDays());
         }
-
-        return iterationdata;
+        System.out.println(iterationsData);
+        return iterationsData;
     }
 }

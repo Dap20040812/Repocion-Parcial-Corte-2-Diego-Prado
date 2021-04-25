@@ -10,7 +10,7 @@ public class Student {
     private String name;
     private String lastName;
     private String email;
-    private Duration workedHours;
+    private Duration workedHours = Duration.ZERO;
 
     public Student(String name, Duration workedHours) {
         this.name = name;

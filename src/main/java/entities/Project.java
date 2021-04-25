@@ -55,14 +55,14 @@ public class Project {
         return d;
     }
 
-    public List<List<String>> summarize(String tipoderesumen) {
+    public List<List<String>> summarize(String tipoderesumen,Project p) {
         List<List<String>> sumary = new ArrayList<>();
 
         if(tipoderesumen.equals("Student"))
-            sumary.add(synthesizerstuden.SynthetizerProject(members));
+            sumary.add(synthesizerstuden.SynthetizerProject(p));
 
         if(tipoderesumen.equals("Iteration"))
-           sumary.add(executiveSynthesizer.SynthetizerProject(iterations));
+           sumary.add(executiveSynthesizer.SynthetizerProject(p));
 
         return sumary;
 
@@ -128,8 +128,11 @@ public class Project {
         return d;
     }
 
+    public List<Student> getMembers() {
+        return members;
+    }
 
-
-
-
+    public List<Iteration> getIterations() {
+        return iterations;
+    }
 }

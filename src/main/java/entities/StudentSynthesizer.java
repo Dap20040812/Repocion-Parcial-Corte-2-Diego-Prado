@@ -4,22 +4,21 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StudentSynthesizer {
+public class StudentSynthesizer implements ISynthesizer{
 
-
-    public List<String> SynthetizerProject(List<Student> students) {
+    @Override
+    public List<String> SynthetizerProject(Project p) {
 
         List<String> studentsdata = new ArrayList<>();
 
-        for(Student s: students)
+        for(Student s: p.getMembers())
         {
             String name = s.getName();
             Duration WorkedHours = s.getWorkedHours();
 
-            studentsdata.add(name+WorkedHours);
+            studentsdata.add(name+", "+WorkedHours.toDays());
         }
-
+        System.out.println(studentsdata);
         return studentsdata;
     }
-
 }
