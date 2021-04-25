@@ -25,7 +25,6 @@ public class ExecutiveSynthesizer implements ISynthesizer{
             }
             iterationsData.add(name+", "+WorkedHours.toDays());
         }
-        System.out.println(iterationsData);
         return iterationsData;
     }
 }

@@ -25,7 +25,7 @@ public class NormalActivity extends Activity {
     public Duration getDuration() throws SabanaResearchException{
 
         Duration d = Duration.ofDays(0);
-        if(steps.size() == 0)
+        if(steps.isEmpty())
         {
             throw new SabanaResearchException(SabanaResearchException.BAD_FORMED_NORMAL_ACTIVITY);
         }

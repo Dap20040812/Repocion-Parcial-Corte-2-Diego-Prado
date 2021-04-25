@@ -18,7 +18,6 @@ public class StudentSynthesizer implements ISynthesizer{
 
             studentsdata.add(name+", "+WorkedHours.toDays());
         }
-        System.out.println(studentsdata);
-        return studentsdata;
+            return studentsdata;
     }
 }

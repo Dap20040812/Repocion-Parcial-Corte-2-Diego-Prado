@@ -31,7 +31,7 @@ public class Iteration {
     public Duration getDuration() throws SabanaResearchException{
 
         Duration d = Duration.ofDays(0);
-        if(activities.size() == 0)
+        if(activities.isEmpty())
         {
             throw new SabanaResearchException(SabanaResearchException.BAD_FORMED_ITERATION);
         }

@@ -7,7 +7,6 @@ public class Group {
 
     private String name;
     private List<Project> projects;
-    private Project project;
 
 
     public Group(String name) {

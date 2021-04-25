@@ -7,7 +7,6 @@ import java.util.List;
 public class DocumentedActivity extends Activity {
 
     private NormalActivity activity;
-    private ISynthesizer synthesizer;
     private List<Question> questions;
 
     public DocumentedActivity(String name, String state, Iteration iteration, NormalActivity activity) {
@@ -28,7 +27,7 @@ public class DocumentedActivity extends Activity {
     public Duration getDuration() throws SabanaResearchException{
 
         Duration d = Duration.ofDays(0);
-        if(questions.size() == 0)
+        if(questions.isEmpty())
         {
             throw new SabanaResearchException(SabanaResearchException.BAD_FORMED_DOCUMENTED_ACTIVITY);
         }

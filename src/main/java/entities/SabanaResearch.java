@@ -36,8 +36,9 @@ public class SabanaResearch {
      * @return The new Summary entry.
      */
     public Summary createSummaryEntry() {
-        int ap=0,op=0,cp=0;
-
+        int ap=0;
+        int op=0;
+        int cp=0;
 
         for(Group g: this.groups)
         {

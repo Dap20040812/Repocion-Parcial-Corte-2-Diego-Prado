@@ -68,8 +68,8 @@ public class   SabanaResearchTest {
 
         assertNotNull(summary, "The summary should be created.");
         assertNotNull(summary.getDate(), "Validate summary date.");
-        assertEquals(summary.getActiveProjects(), 1, "Validate number of active projects");
-        assertEquals(sabanaResearch.countOfSummaries(), 1, "The default count of summaries");
+        assertEquals(1, summary.getActiveProjects(), "Validate number of active projects");
+        assertEquals(1, sabanaResearch.countOfSummaries(), "The default count of summaries");
     }
 
     @Test
@@ -81,20 +81,20 @@ public class   SabanaResearchTest {
 
         assertNotNull(summary, "The summary should be created.");
         assertNotNull(summary.getDate(), "Validate summary date.");
-        assertEquals(summary.getActiveProjects(), 2, "Validate number of active projects");
-        assertEquals(sabanaResearch.countOfSummaries(), 1, "The default count of summaries");
+        assertEquals(2, summary.getActiveProjects(), "Validate number of active projects");
+        assertEquals(1, sabanaResearch.countOfSummaries(), "The default count of summaries");
     }
     @Test
     public void shouldCountClosedActivities() {
 
         Summary summary = sabanaResearch.createSummaryEntry();
-        assertEquals(summary.getClosedActivities(), 0, "The default count of summaries");
+        assertEquals(0, summary.getClosedActivities(), "The default count of summaries");
     }
     @Test
     public void shouldCountOpenActivities() {
 
         Summary summary = sabanaResearch.createSummaryEntry();
-        assertEquals(summary.getOpenActivities(), 4, "The default count of summaries");
+        assertEquals(4, summary.getOpenActivities(), "The default count of summaries");
     }
 
 }

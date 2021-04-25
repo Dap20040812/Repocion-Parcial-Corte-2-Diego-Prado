@@ -98,3 +98,12 @@ param TipeOfSummary
 la sobre-escritura es cuando una clase quiere modificar el cuerpo de un metodo que hereda o implementa, esto se hace cuando una clase comparte el metodo pero lo realiza de una forma diferente o se nesesita modificar algo.
 
 para evitar que se pueda modificar se coloca final en la firma del metodo
+
+
+ # SonarQube
+
+ ## Evidencia
+
+ ![](img/Sonar1.png)
+
+ ![](img/Sonar2.png)

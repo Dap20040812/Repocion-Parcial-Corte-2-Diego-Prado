@@ -1,6 +1,5 @@
 package entities;
 
-import java.lang.reflect.Array;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -43,7 +42,7 @@ public class Project {
     public Duration getDuration() throws SabanaResearchException {
 
         Duration d = Duration.ofDays(0);
-        if(iterations.size() == 0)
+        if(iterations.isEmpty())
         {
             throw new SabanaResearchException(SabanaResearchException.BAD_FORMED_PROJECT);
         }
